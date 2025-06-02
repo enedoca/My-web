@@ -1,0 +1,14 @@
+.sidebar {
+    width: 200px;
+}
+
+.sidebar img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+ }
+
+.sidebar img:hover {
+    transform: scale(1.05);
+}

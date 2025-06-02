@@ -1,0 +1,11 @@
+:root[color-theme='light'] {
+  --surface-default: #F2F0EE;
+  --btn-default: #FFFFFF;
+  --btn-svg-hover: #FFA500;
+}
+
+:root[color-theme='dark'] {
+  --surface-default: #17171C;
+  --btn-default: #23232B;
+  --btn-svg-hover: gold;
+}
