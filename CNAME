@@ -1,0 +1,1 @@
+ismyshopyj.p-e.kr
