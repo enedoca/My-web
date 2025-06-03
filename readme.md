@@ -1,1 +1,1 @@
-ismyshopyj.p-e.kr
+https://ismyshopyj.p-e.kr
