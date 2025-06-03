@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세 - YJSHOP</title>
+    <link rel="stylesheet" href="css/post.css">
+    <!-- Font Awesome CDN (아이콘 사용을 위해) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 게시글 상세 페이지를 위한 추가/커스텀 스타일 */
+        .post-view-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .post-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .post-header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .post-meta {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .post-meta span {
+            margin-right: 15px;
+        }
+        .post-content {
+            line-height: 1.7;
+            font-size: 1em;
+            color: #444;
+            padding: 10px 0; /* 위아래 약간의 패딩 */
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .post-content p,
+        .post-content ul,
+        .post-content ol {
+            margin-bottom: 1em;
+        }
+        .post-navigation {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn-list {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-list:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <div class="post-view-container">
+                <div class="post-header">
+                    <h1>[중요] YJSHOP 서비스 점검 안내 (2023-11-15)</h1>
+                    <div class="post-meta">
+                        <span>작성자: 관리자</span>
+                        <span>작성일: 2023-11-10</span>
+                        <span>조회수: 328</span>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    <p>안녕하세요, YJSHOP을 이용해주시는 고객님들께 감사드립니다.</p>
+                    <p>보다 안정적이고 향상된 서비스 제공을 위해 아래와 같이 시스템 점검 작업을 진행할 예정입니다.</p>
+                    
+                    <h2>점검 일정</h2>
+                    <ul>
+                        <li><strong>일시:</strong> 2023년 11월 15일 (수) 02:00 ~ 06:00 (4시간)</li>
+                        <li><strong>내용:</strong> 서버 안정화 및 데이터베이스 최적화 작업</li>
+                    </ul>
+
+                    <h2>영향</h2>
+                    <p>점검 시간 동안 YJSHOP의 모든 서비스 (웹사이트, 앱) 이용이 일시적으로 중단됩니다.</p>
+                    
+                    <p>이용에 불편을 드려 대단히 죄송합니다. 고객님들의 너른 양해 부탁드리며, 최대한 신속하게 점검을 완료하여 안정적인 서비스로 보답하겠습니다.</p>
+                    
+                    <p>궁금한 점이 있으시면 고객센터로 문의주시기 바랍니다.</p>
+                    <p>감사합니다.</p>
+                    
+                    <!-- 예시 이미지 (images 폴더에 sample_post_image.png 가 있다고 가정) -->
+                    <!-- <img src="images/sample_post_image.png" alt="서비스 점검 안내"> -->
+                </div>
+
+                <div class="post-navigation">
+                    <a href="notice.html" class="btn-list">목록으로 돌아가기</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 스크립트는 body 최하단에 위치 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
