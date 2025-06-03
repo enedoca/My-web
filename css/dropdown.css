@@ -1,33 +1,75 @@
-        .dropdown-content {
-            display: none; /* Hidden by default */
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 0.375rem; /* Tailwind's rounded-md */
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-radius: 0.375rem; /* Tailwind's rounded-md */
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block; /* Show on hover */
-        }
-        .dropdown .dropbtn {
-            display: flex;
-            align-items: center;
-        }
-        .dropdown .dropbtn svg {
-            margin-left: 0.5rem; /* Spacing between text and arrow */
-            transition: transform 0.2s ease-in-out;
-        }
-        .dropdown:hover .dropbtn svg {
-            transform: rotate(180deg);
-        }
+    /* 드롭다운 전체 래퍼 */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* 드롭다운 버튼 스타일 */
+    .dropbtn {
+      background-color: #f97316; /* Tailwind bg-orange-500 */
+      color: white;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dropbtn:hover {
+      background-color: #ea580c; /* Tailwind hover:bg-orange-600 */
+    }
+
+    /* SVG 화살표 스타일 */
+    .dropbtn svg {
+      margin-left: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .dropdown:hover .dropbtn svg {
+      transform: rotate(180deg);
+    }
+
+    /* 드롭다운 컨텐츠 */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      padding-top: 4px;
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* 드롭다운 항목 */
+    .dropdown-content a {
+      display: block;
+      padding: 8px 16px;
+      color: #374151; /* Tailwind text-gray-700 */
+      text-decoration: none;
+      background-color: #f9f9f9;
+      white-space: nowrap;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #e5e7eb; /* Tailwind hover:bg-gray-200 */
+    }
+
+    /* 맨 위, 아래 둥근 모서리 */
+    .dropdown-content a:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
