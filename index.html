@@ -9,12 +9,37 @@
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/content.css" />
     <link rel="stylesheet" href="css/color-scheme.css" />
+	<link rel="stylesheet" href="css/dropdown.css" />
+	<link rel="stylesheet" href="css/header.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="js/dropdown.js"></script>
+
 	
 </head>
 <body>
-	<div class="logo_container">
-		<a href="index.html"><img src="img/logo.png" alt="logo"></a>
-	</div>
+	<header id="header" class="layout1" data-ez-layout="layout1">
+		<div class="inner">
+			<div class="toparea">
+				<div class="dropdown inline-block relative">
+					<button class="bg-orange-500 text-white font-semibold py-2 px-4 rounded-md inline-flex items-center hover:bg-orange-600 transition-colors">
+						<a class="mr-1" href="#">메뉴</a> 
+						<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+					</button>
+					<div class="dropdown-content absolute hidden text-gray-700 pt-1 rounded-md shadow-lg">
+						<a class="rounded-t-md bg-gray-50 hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">공지 사항</a>
+						<a class="bg-gray-50 hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">회원가입</a>
+						<a class="bg-gray-50 hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">로그인</a>
+						<a class="bg-gray-50 hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">주문조회</a>
+						<a class="rounded-b-md bg-gray-50 hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">고객센터</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="logo_container">
+				<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+			</div>
+		</div>
+	</header>
     <div class="container">
         <div class="sidebar">
             <a href="desc1.html"><img src="img/img1.png" alt="Item 1"></a>
@@ -23,9 +48,8 @@
         </div>
 		        <!-- 가운데 설명 -->
         <div class="content">
-            <h1>첫 번째 이미지</h1>
-            <p>이것은 첫 번째 이미지에 대한 설명입니다.</p>
-			<img src="https://papago.naver.com/97ec80a681e94540414daf2fb855ba3b.svg">
+            <h1>YJ shop</h1>
+            <p>YJ shop info</p>
         </div>
 		
 		<div class="icon-bar">
@@ -37,5 +61,6 @@
 	<footer>
 		<h3>Jeon Yeong Jun</h6>
 	</footer>
+	
 </body>
 </html>
