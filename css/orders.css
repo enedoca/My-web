@@ -1,0 +1,238 @@
+/* css/orders.css */
+
+.orders-page-content {
+    padding: 20px 30px;
+    color: #333;
+}
+
+.orders-page-content h2 {
+    font-size: 28px;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    text-align: left;
+}
+
+/* 비회원 주문조회 폼 */
+.non-member-order-check {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.non-member-order-check h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.non-member-order-check .form-group {
+    margin-bottom: 15px;
+}
+
+.non-member-order-check .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.non-member-order-check .form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-check-order {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.btn-check-order:hover {
+    background-color: #0056b3;
+}
+
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+.login-prompt a {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+}
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+
+/* 회원 주문 목록 */
+.member-order-list {
+    margin-top: 20px;
+}
+
+.order-period-filter {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.order-period-filter label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+.order-period-filter select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    margin-right: 10px;
+}
+.btn-filter-search {
+    padding: 8px 15px;
+    background-color: #6c757d; /* 보조 색상 (예시) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-filter-search:hover {
+    background-color: #5a6268;
+}
+
+/* 주문 테이블 */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.order-table th,
+.order-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.order-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.order-table td.product-info {
+    text-align: left;
+    display: flex; /* 썸네일과 상품명 수직 정렬 */
+    align-items: center;
+}
+.product-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+.product-name-options .product-name {
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #333;
+}
+.product-name-options .product-options {
+    font-size: 12px;
+    color: #777;
+}
+.order-table a { /* 주문번호, 주문상세 버튼 링크 스타일 */
+    color: #007bff;
+    text-decoration: none;
+}
+.order-table a:hover {
+    text-decoration: underline;
+}
+
+.order-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+}
+.order-status.status-shipped { /* 배송완료 */
+    background-color: #28a745; /* 예시: 초록색 */
+    color: white;
+}
+.order-status.status-preparing { /* 상품준비중 */
+    background-color: #ffc107; /* 예시: 노란색 */
+    color: #212529;
+}
+.order-status.status-cancelled { /* 주문취소 */
+    background-color: #dc3545; /* 예시: 빨간색 */
+    color: white;
+}
+.order-status.status-payment-pending { /* 입금대기 */
+    background-color: #6c757d; /* 예시: 회색 */
+    color: white;
+}
+
+
+.btn-view-detail {
+    padding: 6px 10px;
+    font-size: 13px;
+    background-color: #17a2b8; /* 예시: 청록색 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.btn-view-detail:hover {
+    background-color: #138496;
+    text-decoration: none;
+    color: white;
+}
+
+.no-orders {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 16px;
+    color: #777;
+}
+
+/* 페이지네이션 */
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+.pagination a {
+    color: #555;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.pagination a:hover:not(.active) {
+    background-color: #f0f0f0;
+}

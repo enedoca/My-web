@@ -1,0 +1,111 @@
+/* css/signin.css */
+
+.signin-page-content {
+    display: flex; /* 내부 컨텐츠 중앙 정렬을 위해 flex 사용 */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* 상하좌우 패딩 */
+    /* 기존 content.css 의 스타일과 충돌하지 않도록 주의 
+       또는 .content 클래스에 적용된 padding 등을 여기에서 초기화/조정할 수 있습니다. */
+}
+
+.signin-form-container {
+    background-color: #fff; /* 폼 컨테이너 배경색 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 효과 */
+    width: 100%;
+    max-width: 400px; /* 폼 최대 너비 설정 */
+    text-align: center; /* 내부 텍스트 중앙 정렬 (제목 등) */
+}
+
+.signin-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333; /* 프로젝트의 color-scheme.css 와 일관된 색상 사용 */
+}
+
+#signInForm .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* 레이블과 인풋은 왼쪽 정렬 */
+}
+
+#signInForm .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+#signInForm .form-group input[type="text"],
+#signInForm .form-group input[type="password"] {
+    width: 100%;
+    padding: 12px; /* 패딩 증가로 좀 더 시원한 느낌 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+#signInForm .form-group input[type="text"]:focus,
+#signInForm .form-group input[type="password"]:focus {
+    border-color: #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* 포커스 시 그림자 */
+}
+
+#signInForm .form-options {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+}
+
+#signInForm .form-options label {
+    display: inline-flex; /* 체크박스와 텍스트 정렬 */
+    align-items: center;
+    cursor: pointer;
+}
+
+#signInForm .form-options input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+#signInForm .btn-signin {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#signInForm .btn-signin:hover {
+    background-color: #0056b3; /* 호버 시 색상 변경 */
+}
+
+.signin-links {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.signin-links a {
+    color: #555; /* 링크 색상 */
+    text-decoration: none;
+}
+
+.signin-links a:hover {
+    text-decoration: underline;
+    color: #007bff; /* 호버 시 링크 색상 변경 */
+}
+
+.signin-links .separator {
+    margin: 0 10px;
+    color: #ccc; /* 구분선 색상 */
+}

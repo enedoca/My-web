@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>주문조회 - YS SHOP</title>
+    
+    <!-- 기존 YS SHOP CSS 링크들 (이전 파일과 동일하게 유지) -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/iconbar.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/color-scheme.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    
+    <!-- 새로 추가될 주문조회 페이지 전용 CSS -->
+    <link rel="stylesheet" href="css/orders.css" />
+
+    <!-- 기존 YS SHOP JS 링크 (이전 파일과 동일하게 유지) -->
+    <script defer src="js/dropdown.js"></script>
+</head>
+<body>
+    <!-- Header (이전 파일과 동일하게 유지) -->
+    <header id="header" class="layout1" data-ez-layout="layout1">
+        <div class="inner">
+            <div class="toparea">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <span style="margin-right: 4px;">메뉴</span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="notice.html">공지 사항</a>
+                        <a href="signup.html">회원가입</a>
+                        <a href="signin.html">로그인</a>
+                        <a href="orders.html">주문조회</a> <!-- 현재 페이지 링크 -->
+                        <a href="support.html">고객센터</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo_container">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container (이전 파일과 동일한 구조 유지) -->
+    <div class="container">
+        <!-- Sidebar (이전 파일과 동일하게 유지) -->
+        <div class="sidebar">
+            <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
+            <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
+            <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
+        </div>
+
+        <!-- Content (이 부분을 주문조회 내용으로 변경) -->
+        <div class="content orders-page-content">
+            <h2>주문/배송 조회</h2>
+
+            <!-- 비회원 주문조회 폼: 기본적으로 표시되도록 style 변경 -->
+            <div class="non-member-order-check" id="nonMemberOrderSection"> 
+                <h3>비회원 주문조회</h3>
+                <form id="nonMemberOrderForm">
+                    <div class="form-group">
+                        <label for="orderer-name">주문자명</label>
+                        <input type="text" id="orderer-name" name="orderer-name" placeholder="테스트용: 아무거나 입력">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-number">주문번호</label>
+                        <input type="text" id="order-number" name="order-number" placeholder="테스트용: 아무거나 입력">
+                    </div>
+                    <button type="submit" class="btn btn-check-order">조회하기</button>
+                </form>
+                <p class="login-prompt">회원이시면 <a href="signin.html">로그인</a> 후 이용해주세요.</p>
+            </div>
+
+            <!-- 회원 주문 목록: 기본적으로 숨김, 비회원 조회 버튼 클릭 시 표시 -->
+            <div class="member-order-list" id="memberOrderSection" style="display: none;"> 
+                <div class="order-period-filter">
+                    <label for="order-period">조회기간:</label>
+                    <select id="order-period" name="order-period">
+                        <option value="3m">최근 3개월</option>
+                        <option value="6m">최근 6개월</option>
+                        <option value="1y">최근 1년</option>
+                        <option value="all">전체 기간</option>
+                    </select>
+                    <button class="btn btn-filter-search">조회</button>
+                </div>
+
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>주문일자</th>
+                            <th>주문번호</th>
+                            <th>상품정보</th>
+                            <th>주문금액</th>
+                            <th>주문상태</th>
+                            <th>상세보기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 주문 내역 반복 부분 (실제 데이터는 서버에서 가져옴) -->
+                        <tr>
+                            <td>2023-10-26</td>
+                            <td><a href="order_detail.html?orderId=20231026001">20231026001</a></td>
+                            <td class="product-info">
+                                <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 이미지" class="product-thumbnail"></a>
+                                <div class="product-name-options">
+                                    <p class="product-name">카메라</p>
+                                </div>
+                            </td>
+                            <td>150,000원</td>
+                            <td><span class="order-status status-shipped">배송완료</span></td>
+                            <td><a href="order_detail.html?orderId=20231026001" class="btn btn-view-detail">주문상세</a></td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-20</td>
+                            <td><a href="order_detail.html?orderId=20231020005">20231020005</a></td>
+                            <td class="product-info">
+                                <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 이미지" class="product-thumbnail"></a>
+                                <div class="product-name-options">
+                                    <p class="product-name">티셔츠</p>
+                                </div>
+                            </td>
+                            <td>89,000원</td>
+                            <td><span class="order-status status-preparing">상품준비중</span></td>
+                            <td><a href="order_detail.html?orderId=20231020005" class="btn btn-view-detail">주문상세</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="no-orders" style="display:none;">조회된 주문 내역이 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <a href="#" class="page-prev">&laquo;</a>
+                    <a href="#" class="page-num active">1</a>
+                    <a href="#" class="page-num">2</a>
+                    <a href="#" class="page-num">3</a>
+                    <a href="#" class="page-next">&raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icon Bar (이전 파일과 동일하게 유지) -->
+        <div class="icon-bar">
+            <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
+            <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
+            <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
+        </div>
+    </div>
+
+    <!-- Footer (이전 파일과 동일하게 유지) -->
+    <footer>
+        <h3>Jeon Yeong Jun</h3>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nonMemberSection = document.getElementById('nonMemberOrderSection');
+            const memberSection = document.getElementById('memberOrderSection');
+            const nonMemberOrderForm = document.getElementById('nonMemberOrderForm');
+
+            // 비회원 주문조회 폼을 기본으로 표시, 회원 주문 목록은 숨김
+            if(nonMemberSection) nonMemberSection.style.display = 'block';
+            if(memberSection) memberSection.style.display = 'none';
+
+            if (nonMemberOrderForm) {
+                nonMemberOrderForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // 폼의 기본 제출 동작(페이지 새로고침)을 막음
+
+                    // 비회원 주문조회 폼 숨기기
+                    if(nonMemberSection) nonMemberSection.style.display = 'none';
+                    // 회원 주문 목록 보이기
+                    if(memberSection) memberSection.style.display = 'block';
+
+                    // 여기에 실제로는 입력된 주문자명과 주문번호로 서버에 조회하는 로직이 들어가야 합니다.
+                    // 테스트 목적이므로, 바로 주문 목록을 보여줍니다.
+                    console.log('비회원 주문 조회 버튼 클릭 (테스트용으로 목록 표시)');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

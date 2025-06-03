@@ -1,0 +1,160 @@
+/* css/signup.css */
+
+.signup-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 내용이 길어질 수 있으므로 상단 정렬 */
+    padding: 40px 20px;
+    /* background-color: #f9f9f9; /* 페이지 배경색을 다르게 하고 싶다면 */
+}
+
+.signup-form-container {
+    background-color: #fff;
+    padding: 30px 40px; /* 좌우 패딩 증가 */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* 폼 너비를 로그인보다 약간 넓게 */
+    text-align: center;
+    margin-bottom: 30px; /* 푸터와의 간격 */
+}
+
+.signup-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 30px; /* 간격 증가 */
+    font-size: 26px; /* 글꼴 크기 증가 */
+    color: #333;
+}
+
+#signUpForm .form-group {
+    margin-bottom: 18px; /* 간격 약간 줄임 */
+    text-align: left;
+    position: relative; /* 중복확인 버튼 등의 위치 지정을 위해 */
+}
+
+#signUpForm .form-group label {
+    display: block;
+    margin-bottom: 6px; /* 간격 약간 줄임 */
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+#signUpForm .form-group input[type="text"],
+#signUpForm .form-group input[type="password"],
+#signUpForm .form-group input[type="email"],
+#signUpForm .form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px 12px; /* 패딩 조정 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* 입력 필드 옆에 버튼이 있는 경우의 스타일 (주석 처리된 버튼들) */
+/* #signUpForm .form-group input[type="text"] + .btn-check-duplicate,
+#signUpForm .form-group input[type="email"] + .btn-send-auth {
+    position: absolute;
+    right: 0;
+    top: 28px; 
+    padding: 8px 10px;
+    font-size: 12px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+#signUpForm .form-group input[type="text"] {
+    padding-right: 90px; 
+}
+#signUpForm .form-group input[type="email"] {
+    padding-right: 110px; 
+} */
+
+
+#signUpForm .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* 약관 동의 부분 스타일 */
+#signUpForm .terms-agreement {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 25px;
+    background-color: #fdfdfd;
+}
+#signUpForm .terms-agreement > label { /* 전체 동의 레이블 */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#signUpForm .terms-agreement .terms-description {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+#signUpForm .terms-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between; /* 레이블과 '자세히보기' 링크 양쪽 정렬 */
+    align-items: center;
+}
+#signUpForm .terms-item label {
+    font-weight: normal;
+    color: #444;
+    margin-bottom: 0; /* 내부 레이블 마진 제거 */
+}
+#signUpForm .terms-item input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+#signUpForm .view-terms-link {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+#signUpForm .view-terms-link:hover {
+    text-decoration: underline;
+}
+
+
+#signUpForm .btn-signup {
+    width: 100%;
+    padding: 14px; /* 버튼 패딩 증가 */
+    background-color: #28a745; /* 가입하기 버튼 색상 (예시: 초록색) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; /* 버튼 글꼴 크기 증가 */
+    font-weight: 600;
+    margin-top: 20px; /* 약관 동의와 버튼 사이 간격 */
+    transition: background-color 0.2s ease-in-out;
+}
+
+#signUpForm .btn-signup:hover {
+    background-color: #218838; /* 호버 시 색상 변경 */
+}
+
+.signup-links {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-links a {
+    color: #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-links a:hover {
+    text-decoration: underline;
+}

@@ -1,72 +1,125 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>YJ SHOP</title>
-  
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/iconbar.css" />
-  <link rel="stylesheet" href="css/sidebar.css" />
-  <link rel="stylesheet" href="css/content.css" /> <!-- 위 CSS 변경 사항이 여기에 적용되어야 함 -->
-  <link rel="stylesheet" href="css/color-scheme.css" />
-  <link rel="stylesheet" href="css/dropdown.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/notice.css">
-  <script src="js/dropdown.js"></script>
+    <meta charset="UTF-8" />
+    <title>고객센터 - YS SHOP</title>
+    
+    <!-- 기존 YS SHOP CSS 링크들 (이전 파일과 동일하게 유지) -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/iconbar.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/color-scheme.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    
+    <!-- 새로 추가될 고객센터 페이지 전용 CSS -->
+    <link rel="stylesheet" href="css/support.css" />
+
+    <!-- 기존 YS SHOP JS 링크 (이전 파일과 동일하게 유지) -->
+    <script defer src="js/dropdown.js"></script>
 </head>
 <body>
-  <header id="header" class="layout1" data-ez-layout="layout1">
-    <div class="inner">
-      <div class="toparea">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <span style="margin-right: 4px;">메뉴</span>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="notice.html">공지 사항</a>
-            <a href="signup.html">회원가입</a>
-            <a href="signin.html">로그인</a>
-            <a href="order_list.html">주문조회</a>
-            <a href="support.html">고객센터</a>
-          </div>
+    <!-- Header (이전 파일과 동일하게 유지) -->
+    <header id="header" class="layout1" data-ez-layout="layout1">
+        <div class="inner">
+            <div class="toparea">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <span style="margin-right: 4px;">메뉴</span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="notice.html">공지 사항</a>
+                        <a href="signup.html">회원가입</a>
+                        <a href="signin.html">로그인</a>
+                        <a href="orders.html">주문조회</a>
+                        <a href="support.html">고객센터</a> <!-- 현재 페이지 링크 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo_container">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <div class="logo_container">
-        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-      </div>
+    <!-- Container (이전 파일과 동일한 구조 유지) -->
+    <div class="container">
+        <!-- Sidebar (이전 파일과 동일하게 유지) -->
+        <div class="sidebar">
+            <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
+            <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
+            <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
+        </div>
+
+        <!-- Content (이 부분을 고객센터 내용으로 변경) -->
+        <div class="content support-page-content">
+            <h2>고객센터</h2>
+            <p class="support-intro">YS SHOP을 이용해주셔서 감사합니다. 무엇을 도와드릴까요?</p>
+
+            <div class="support-section faq-section">
+                <h3>자주 묻는 질문 (FAQ)</h3>
+                <ul class="faq-list">
+                    <li>
+                        <details>
+                            <summary>Q. 배송은 얼마나 걸리나요?</summary>
+                            <p>A. 기본적으로 주문일로부터 2~5영업일 이내에 배송됩니다. (주말/공휴일 제외) 단, 도서산간 지역이나 주문량이 많을 경우 다소 지연될 수 있습니다.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Q. 교환/반품은 어떻게 하나요?</summary>
+                            <p>A. 상품 수령 후 7일 이내에 마이페이지 또는 고객센터를 통해 신청 가능합니다. 자세한 내용은 교환/반품 정책을 참고해주세요.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Q. 회원가입은 어떻게 하나요?</summary>
+                            <p>A. 홈페이지 상단의 '회원가입' 메뉴를 통해 간단한 정보 입력 후 가입하실 수 있습니다.</p>
+                        </details>
+                    </li>
+                </ul>
+                <p class="more-faq"><a href="faq.html">더 많은 FAQ 보기 &rarr;</a></p> <!-- FAQ 전체 페이지로 이동 (faq.html이 있다고 가정) -->
+            </div>
+
+            <div class="support-section inquiry-section">
+                <h3>1:1 문의하기</h3>
+                <p>자주 묻는 질문으로 해결되지 않는 궁금한 점이 있으시면 1:1 문의를 이용해주세요.<br>최대한 빠르고 친절하게 답변드리겠습니다.</p>
+                <a href="contact_form.html" class="btn btn-inquiry">1:1 문의하기</a> <!-- 1:1 문의 폼 페이지로 이동 (contact_form.html이 있다고 가정) -->
+            </div>
+
+            <div class="support-section operation-hours">
+                <h3>운영시간 안내</h3>
+                <p><span>평일:</span> 09:00 ~ 18:00 (점심시간: 12:00 ~ 13:00)</p>
+                <p><span>주말 및 공휴일:</span> 휴무</p>
+                <p class="note">* 1:1 문의는 운영시간 외에도 접수 가능하며, 답변은 영업일 기준으로 순차적으로 처리됩니다.</p>
+            </div>
+
+            <div class="support-section contact-info">
+                <h3>연락처 정보</h3>
+                <p><span>대표 전화:</span> 1588-XXXX (유료)</p>
+                <p><span>이메일:</span> support@ysshop.example.com</p>
+                <p class="note">* 전화 상담은 운영시간 내에만 가능합니다.</p>
+            </div>
+        </div>
+
+        <!-- Icon Bar (이전 파일과 동일하게 유지) -->
+        <div class="icon-bar">
+            <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
+            <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
+            <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
+        </div>
     </div>
-  </header>
 
-  <div class="container">
-    <div class="sidebar">
-      <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
-      <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
-      <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
-    </div>
-
-    <!-- 가운데 설명 및 상품 목록 -->
-    <div class="content">
-		<div id="content">
-			
-		</div>
-
-    </div>
-
-    <div class="icon-bar">
-      <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
-      <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
-      <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
-    </div>
-  </div>
-
-  <footer>
-    <h3>Jeon Yeong Jun</h3> <!-- h 태그 일치시킴 -->
-  </footer>
+    <!-- Footer (이전 파일과 동일하게 유지) -->
+    <footer>
+        <h3>Jeon Yeong Jun</h3>
+    </footer>
 
 </body>
 </html>

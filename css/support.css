@@ -1,0 +1,139 @@
+/* css/support.css */
+
+.support-page-content {
+    padding: 20px 30px; /* 내부 패딩 조정 */
+    line-height: 1.7;
+    color: #333;
+}
+
+.support-page-content h2 {
+    font-size: 28px;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    text-align: left;
+}
+
+.support-intro {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.support-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ddd; /* 섹션 구분선 */
+}
+.support-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.support-section h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+}
+
+/* FAQ 리스트 스타일 */
+.faq-list {
+    list-style: none;
+    padding: 0;
+}
+.faq-list li {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden; /* details 요소의 기본 화살표가 튀어나오지 않도록 */
+}
+.faq-list summary {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    position: relative; /* 커스텀 화살표를 위해 */
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+}
+.faq-list summary::marker { /* 기본 화살표 숨기기 (일부 브라우저) */
+    display: none;
+    content: "";
+}
+.faq-list summary::-webkit-details-marker { /* 기본 화살표 숨기기 (웹킷) */
+    display: none;
+}
+.faq-list summary::after { /* 커스텀 화살표 아이콘 (예시) */
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+.faq-list details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-list details > p {
+    padding: 15px;
+    margin: 0;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
+}
+.more-faq {
+    text-align: right;
+    margin-top: 15px;
+}
+.more-faq a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.more-faq a:hover {
+    text-decoration: underline;
+}
+
+/* 1:1 문의 섹션 */
+.inquiry-section p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.btn-inquiry {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff; /* 프로젝트의 주 색상 활용 (예시) */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+.btn-inquiry:hover {
+    background-color: #0056b3;
+}
+
+/* 운영시간 및 연락처 정보 */
+.operation-hours p,
+.contact-info p {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.operation-hours p span,
+.contact-info p span {
+    font-weight: 600;
+    margin-right: 5px;
+    color: #444;
+}
+.note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 10px;
+}

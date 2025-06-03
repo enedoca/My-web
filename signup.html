@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>회원가입 - YS SHOP</title>
+    
+    <!-- 기존 YS SHOP CSS 링크들 (이전 파일과 동일하게 유지) -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/iconbar.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/color-scheme.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    
+    <link rel="stylesheet" href="css/signup.css" />
+
+    <script defer src="js/dropdown.js"></script>
+    <!-- 회원가입 폼 유효성 검사 등을 위한 JS (필요시 추가) -->
+    <!-- <script defer src="js/signup_validation.js"></script> -->
+</head>
+<body>
+    <!-- Header (이전 파일과 동일하게 유지) -->
+    <header id="header" class="layout1" data-ez-layout="layout1">
+        <div class="inner">
+            <div class="toparea">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <span style="margin-right: 4px;">메뉴</span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="notice.html">공지 사항</a>
+                        <a href="signup.html">회원가입</a> <!-- 현재 페이지 링크 -->
+                        <a href="signin.html">로그인</a>
+                        <a href="orders.html">주문조회</a>
+                        <a href="support.html">고객센터</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo_container">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container (이전 파일과 동일한 구조 유지) -->
+    <div class="container">
+        <!-- Sidebar (이전 파일과 동일하게 유지) -->
+        <div class="sidebar">
+            <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
+            <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
+            <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
+        </div>
+
+        <!-- Content (이 부분을 회원가입 폼으로 변경) -->
+        <div class="content signup-page-content">
+            <div class="signup-form-container">
+                <h2>회원가입</h2>
+                <form id="signUpForm" action="#" method="post"> <!-- action과 method는 실제 서버 로직에 맞게 수정 -->
+                    <div class="form-group">
+                        <label for="new-username">아이디</label>
+                        <input type="text" id="new-username" name="new-username" placeholder="6-20자 영문, 숫자" required>
+                        <!-- <button type="button" class="btn-check-duplicate">중복확인</button> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">비밀번호</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="8-16자 영문, 숫자, 특수문자 조합" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">비밀번호 확인</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="비밀번호를 다시 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="email" placeholder="예: yourid@example.com" required>
+                        <!-- <button type="button" class="btn-send-auth">인증번호 발송</button> -->
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="email-auth">이메일 인증번호</label>
+                        <input type="text" id="email-auth" name="email-auth" placeholder="인증번호를 입력하세요">
+                    </div> -->
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">휴대폰 번호</label>
+                        <input type="tel" id="phone" name="phone" placeholder="'-' 없이 숫자만 입력" required>
+                    </div>
+                    <div class="form-group terms-agreement">
+                        <label>
+                            <input type="checkbox" id="agree-all" name="agree-all"> 전체 동의합니다.
+                        </label>
+                        <p class="terms-description">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+                        
+                        <div class="terms-item">
+                            <label>
+                                <input type="checkbox" id="agree-terms" name="agree-terms" class="required-agree" required> (필수) 이용약관 동의
+                            </label>
+                            <a href="#" class="view-terms-link" target="_blank">[자세히 보기]</a>
+                        </div>
+                        <div class="terms-item">
+                            <label>
+                                <input type="checkbox" id="agree-privacy" name="agree-privacy" class="required-agree" required> (필수) 개인정보 수집 및 이용 동의
+                            </label>
+                            <a href="#" class="view-terms-link" target="_blank">[자세히 보기]</a>
+                        </div>
+                        <div class="terms-item">
+                            <label>
+                                <input type="checkbox" id="agree-marketing" name="agree-marketing"> (선택) 마케팅 정보 수신 동의
+                            </label>
+                            <a href="#" class="view-terms-link" target="_blank">[자세히 보기]</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-signup">가입하기</button>
+                </form>
+                <div class="signup-links">
+                    이미 회원이신가요? <a href="signin.html">로그인하기</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icon Bar (이전 파일과 동일하게 유지) -->
+        <div class="icon-bar">
+            <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
+            <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
+            <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
+        </div>
+    </div>
+
+    <!-- Footer (이전 파일과 동일하게 유지) -->
+    <footer>
+        <h3>Jeon Yeong Jun</h3>
+    </footer>
+
+</body>
+</html>

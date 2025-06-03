@@ -1,72 +1,203 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>YS SHOP</title>
-  
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/iconbar.css" />
-  <link rel="stylesheet" href="css/sidebar.css" />
-  <link rel="stylesheet" href="css/content.css" /> <!-- 위 CSS 변경 사항이 여기에 적용되어야 함 -->
-  <link rel="stylesheet" href="css/color-scheme.css" />
-  <link rel="stylesheet" href="css/dropdown.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <script src="js/dropdown.js"></script>
+    <meta charset="UTF-8" />
+    <title>상품 1 상세 - YS SHOP</title> <!-- 상품명에 맞게 타이틀 변경 -->
+    
+    <!-- 기존 YS SHOP CSS 링크들 -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/iconbar.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/content.css" /> 
+    <link rel="stylesheet" href="css/color-scheme.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <!-- 상품 상세 페이지 전용 CSS -->
+    <link rel="stylesheet" href="css/product_detail.css" /> 
+
+    <!-- 기존 YS SHOP JS 링크 -->
+    <script defer src="js/dropdown.js"></script>
 </head>
 <body>
-  <header id="header" class="layout1" data-ez-layout="layout1">
-    <div class="inner">
-      <div class="toparea">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <span style="margin-right: 4px;">메뉴</span>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="notice.html">공지 사항</a>
-            <a href="signup.html">회원가입</a>
-            <a href="signin.html">로그인</a>
-            <a href="orders.html">주문조회</a>
-            <a href="support.html">고객센터</a>
-          </div>
+    <!-- Header (기존과 동일) -->
+    <header id="header" class="layout1" data-ez-layout="layout1">
+        <div class="inner">
+            <div class="toparea">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <span style="margin-right: 4px;">메뉴</span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="notice.html">공지 사항</a>
+                        <a href="signup.html">회원가입</a>
+                        <a href="signin.html">로그인</a>
+                        <a href="orders.html">주문조회</a>
+                        <a href="support.html">고객센터</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo_container">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <div class="logo_container">
-        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-      </div>
+    <!-- Container (기존과 동일) -->
+    <div class="container">
+        <!-- Sidebar (기존과 동일) -->
+        <div class="sidebar">
+            <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
+            <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
+            <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
+        </div>
+
+        <!-- Content (상품 상세 정보 및 구매 버튼으로 수정) -->
+        <div class="content product-detail-page-content">
+            <div class="product-image-section">
+                <img src="img/product_sample_5.png" alt="상품 5 메인 이미지" class="main-product-image">
+                <!-- 추가 썸네일 이미지들 (필요시) -->
+                <!-- 
+                <div class="thumbnail-images">
+                    <img src="img/product_sample_1_thumb1.png" alt="상품 1 썸네일 1">
+                    <img src="img/product_sample_1_thumb2.png" alt="상품 1 썸네일 2">
+                </div>
+                -->
+            </div>
+
+            <div class="product-info-section">
+                <h1 class="product-name">상품 5 (샘플 상품명)</h1>
+                <p class="product-short-description">이것은 상품 5에 대한 간략한 설명입니다. 매우 훌륭하고 멋진 상품입니다.</p>
+                
+                <div class="product-price-area">
+                    <span class="original-price">120,000원</span> <!-- 원래 가격 (할인 시) -->
+                    <span class="sale-price">99,000원</span> <span class="discount-rate">(17% 할인)</span>
+                </div>
+
+                <!-- 옵션 선택 (예: 색상, 사이즈) -->
+                <div class="product-options">
+                    <div class="option-group">
+                        <label for="color-option">색상:</label>
+                        <select id="color-option" name="color">
+                            <option value="">색상 선택</option>
+                            <option value="red">레드</option>
+                            <option value="blue">블루</option>
+                            <option value="black">블랙</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="size-option">사이즈:</label>
+                        <select id="size-option" name="size">
+                            <option value="">사이즈 선택</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="quantity">수량:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                    </div>
+                </div>
+                
+                <div class="total-price-display" style="display:none;"> <!-- 옵션 선택 시 JS로 업데이트 -->
+                    총 상품금액: <span id="calculated-total-price">99,000원</span>
+                </div>
+
+                <div class="product-actions">
+                    <button type="button" class="btn btn-buy-now">구매하기</button>
+                    <button type="button" class="btn btn-add-to-cart">장바구니</button>
+                    <button type="button" class="btn btn-wishlist">찜하기</button>
+                </div>
+
+                <div class="product-delivery-info">
+                    <p><strong>배송정보:</strong> 일반배송 / 무료배송 (3만원 이상 구매 시)</p>
+                    <p><strong>배송예상:</strong> 주문 후 2~3일 이내 (주말, 공휴일 제외)</p>
+                </div>
+            </div>
+
+            <div class="product-full-description-section">
+                <h2>상품 상세 정보</h2>
+                <p>여기는 상품 1에 대한 아주 자세한 설명이 들어가는 곳입니다. 텍스트, 이미지 등 다양한 콘텐츠를 포함할 수 있습니다.</p>
+                <img src="img/product_detail_sample_1.jpg" alt="상품 1 상세 정보 이미지 1">
+                <p>계속해서 상품의 특징, 장점, 사용 방법 등을 설명합니다. 고품질의 소재와 뛰어난 디자인을 자랑합니다.</p>
+                <img src="img/product_detail_sample_2.jpg" alt="상품 1 상세 정보 이미지 2">
+                <!-- 추가 상세 정보 내용 -->
+            </div>
+            
+            <div class="product-reviews-section">
+                <h2>구매 후기 (3)</h2>
+                <!-- 구매 후기 목록 예시 -->
+                <div class="review-item">
+                    <p class="reviewer-info"><strong>홍길동</strong> (구매일: 2023-10-25)</p>
+                    <p class="review-rating">★★★★☆</p>
+                    <p class="review-text">상품 잘 받았습니다. 생각보다 더 마음에 드네요!</p>
+                </div>
+                <!-- 추가 후기 -->
+            </div>
+
+        </div>
+
+        <!-- Icon Bar (기존과 동일) -->
+        <div class="icon-bar">
+            <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
+            <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
+            <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
+        </div>
     </div>
-  </header>
 
-  <div class="container">
-    <div class="sidebar">
-      <a href="product_detail_1.html"><img src="img/product_sample_1.png" alt="상품 1"></a>
-      <a href="product_detail_2.html"><img src="img/product_sample_2.png" alt="상품 2"></a>
-      <a href="product_detail_3.html"><img src="img/product_sample_3.png" alt="상품 3"></a>
-    </div>
+    <!-- Footer (기존과 동일) -->
+    <footer>
+        <h3>Jeon Yeong Jun</h3>
+    </footer>
 
-    <!-- 가운데 설명 및 상품 목록 -->
-    <div class="content">
-      <a href="product_detail_5.html"><img src="img/product_sample_5.png" alt="상품 5"></a>
-      <h1>상품 5</h1>
-      <p>상품 5 정보</p>
-	  <img src="#" alt="상품 5 정보 이미지">
+    <script>
+        // 간단한 옵션 선택 및 가격 업데이트 예시
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity');
+            const totalPriceDisplay = document.getElementById('calculated-total-price');
+            const basePrice = 99000; // 상품 기본 가격 (할인가)
 
-    </div>
+            if (quantityInput && totalPriceDisplay) {
+                quantityInput.addEventListener('change', function() {
+                    const quantity = parseInt(this.value, 10);
+                    if (quantity > 0) {
+                        const newTotalPrice = basePrice * quantity;
+                        totalPriceDisplay.textContent = newTotalPrice.toLocaleString() + '원';
+                        document.querySelector('.total-price-display').style.display = 'block';
+                    } else {
+                        document.querySelector('.total-price-display').style.display = 'none';
+                    }
+                });
+            }
 
-    <div class="icon-bar">
-      <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
-      <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
-      <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
-    </div>
-  </div>
+            // 버튼 클릭 시 동작 (테스트용 alert)
+            const buyNowButton = document.querySelector('.btn-buy-now');
+            const addToCartButton = document.querySelector('.btn-add-to-cart');
+            const wishlistButton = document.querySelector('.btn-wishlist');
 
-  <footer>
-    <h3>Jeon Yeong Jun</h3> <!-- h 태그 일치시킴 -->
-  </footer>
-
+            if(buyNowButton) {
+                buyNowButton.addEventListener('click', function() {
+                    alert('구매하기 버튼 클릭! (실제로는 결제 페이지로 이동)');
+                });
+            }
+            if(addToCartButton) {
+                addToCartButton.addEventListener('click', function() {
+                    alert('장바구니 버튼 클릭! (실제로는 장바구니에 상품 추가)');
+                });
+            }
+            if(wishlistButton) {
+                wishlistButton.addEventListener('click', function() {
+                    alert('찜하기 버튼 클릭! (실제로는 찜 목록에 추가)');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
