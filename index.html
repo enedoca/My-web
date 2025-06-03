@@ -1,68 +1,124 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-	<title>이미지 리스트</title>
-	
-    <link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/iconbar.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/content.css" />
-    <link rel="stylesheet" href="css/color-scheme.css" />
-	<link rel="stylesheet" href="css/dropdown.css" />
-	<link rel="stylesheet" href="css/header.css" />
-	<script src="js/dropdown.js"></script>
-
-	
+  <meta charset="UTF-8" />
+  <title>이미지 리스트</title>
+  
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/iconbar.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/content.css" /> <!-- 위 CSS 변경 사항이 여기에 적용되어야 함 -->
+  <link rel="stylesheet" href="css/color-scheme.css" />
+  <link rel="stylesheet" href="css/dropdown.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <script src="js/dropdown.js"></script>
 </head>
 <body>
-	<header id="header" class="layout1" data-ez-layout="layout1">
-		<div class="inner">
-			<div class="toparea">
-			  <div class="dropdown">
-				<button class="dropbtn">
-				  <span style="margin-right: 4px;">메뉴</span>
-				  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
-					<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-				  </svg>
-				</button>
-				<div class="dropdown-content">
-				  <a href="#">공지 사항</a>
-				  <a href="#">회원가입</a>
-				  <a href="#">로그인</a>
-				  <a href="#">주문조회</a>
-				  <a href="#">고객센터</a>
-				</div>
-			  </div>
-			</div>
+  <header id="header" class="layout1" data-ez-layout="layout1">
+    <div class="inner">
+      <div class="toparea">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <span style="margin-right: 4px;">메뉴</span>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">공지 사항</a>
+            <a href="#">회원가입</a>
+            <a href="#">로그인</a>
+            <a href="#">주문조회</a>
+            <a href="#">고객센터</a>
+          </div>
+        </div>
+      </div>
 
-			<div class="logo_container">
-				<a href="index.html"><img src="img/logo.png" alt="logo"></a>
-			</div>
-		</div>
-	</header>
-    <div class="container">
-        <div class="sidebar">
-            <a href="desc1.html"><img src="img/img1.png" alt="Item 1"></a>
-            <a href="desc2.html"><img src="img/img2.png" alt="Item 2"></a>
-            <a href="desc3.html"><img src="img/img3.png" alt="Item 3"></a>
-        </div>
-		        <!-- 가운데 설명 -->
-        <div class="content">
-            <h1>YJ shop</h1>
-            <p>YJ shop info</p>
-        </div>
-		
-		<div class="icon-bar">
-			<a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="아이콘 1" /></a>
-			<a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="아이콘 2" /></a>
-			<a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="아이콘 3" /></a>
-		</div>
+      <div class="logo_container">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      </div>
     </div>
-	<footer>
-		<h3>Jeon Yeong Jun</h3>
-	</footer>
-	
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="desc1.html"><img src="img/img1.png" alt="Item 1"></a>
+      <a href="desc2.html"><img src="img/img2.png" alt="Item 2"></a>
+      <a href="desc3.html"><img src="img/img3.png" alt="Item 3"></a>
+    </div>
+
+    <!-- 가운데 설명 및 상품 목록 -->
+    <div class="content">
+      <h1>YJ shop</h1>
+      <p>YJ shop info</p>
+
+      <!-- 상품 목록 시작 -->
+      <div class="product-list">
+        <div class="product-item">
+          <a href="product_detail_1.html"> <!-- 상품 1 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_1.jpg" alt="상품 1 이름">
+            </div>
+            <div class="product-caption">상품 1</div>
+          </a>
+        </div>
+        <div class="product-item">
+          <a href="product_detail_2.html"> <!-- 상품 2 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_2.jpg" alt="상품 2 이름">
+            </div>
+            <div class="product-caption">상품 2</div>
+          </a>
+        </div>
+        <div class="product-item">
+          <a href="product_detail_3.html"> <!-- 상품 3 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_3.jpg" alt="상품 3 이름">
+            </div>
+            <div class="product-caption">상품 3</div>
+          </a>
+        </div>
+        <div class="product-item">
+          <a href="product_detail_4.html"> <!-- 상품 4 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_4.jpg" alt="상품 4 이름">
+            </div>
+            <div class="product-caption">상품 4</div>
+          </a>
+        </div>
+        <div class="product-item">
+          <a href="product_detail_5.html"> <!-- 상품 5 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_5.jpg" alt="상품 5 이름">
+            </div>
+            <div class="product-caption">상품 5</div>
+          </a>
+        </div>
+        <div class="product-item">
+          <a href="product_detail_6.html"> <!-- 상품 6 상세 페이지 링크 -->
+            <div class="product-image-box">
+              <img src="img/product_sample_6.jpg" alt="상품 6 이름">
+            </div>
+            <div class="product-caption">상품 6</div>
+          </a>
+        </div>
+        <!-- 필요한 만큼 상품 아이템을 추가하세요. 각 href와 img src, alt를 수정하세요. -->
+      </div>
+      <!-- 상품 목록 끝 -->
+
+    </div>
+
+    <div class="icon-bar">
+      <a href="https://github.com/enedoca" target="_blank"><img src="img/icon1.png" alt="깃허브 아이콘" /></a>
+      <a href="https://solved.ac/profile/juni1311" target="_blank"><img src="img/icon2.png" alt="solved.ac 아이콘" /></a>
+      <a href="https://www.kunsan.ac.kr" target="_blank"><img src="img/icon3.png" alt="군산대학교 아이콘" /></a>
+    </div>
+  </div>
+
+  <footer>
+    <h3>Jeon Yeong Jun</h3> <!-- h 태그 일치시킴 -->
+  </footer>
+
 </body>
 </html>
